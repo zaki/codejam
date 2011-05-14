@@ -47,12 +47,12 @@ File.open('problem.b.test.txt') do |f|
       if (oppositions[opp[0].chr].nil?)
         oppositions[opp[0].chr] ||= opp[1].chr
       else
-        oppositions[opp[0].chr] + "|#{opp[1].chr}"
+        oppositions[opp[0].chr] += "|#{opp[1].chr}"
       end
       if (oppositions[opp[1].chr].nil?)
         oppositions[opp[1].chr] ||= opp[0].chr
       else
-        oppositions[opp[1].chr] + "|#{opp[0].chr}"
+        oppositions[opp[1].chr] += "|#{opp[0].chr}"
       end
     end
     oppositions.each_key do |key|
